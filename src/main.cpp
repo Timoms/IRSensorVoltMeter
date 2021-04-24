@@ -20,35 +20,22 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// #include <conn.h>
-// #include <sensor.h>
-// #include <config.h>
-
-#include "../lib/conn/src/conn.h"
-#include "../lib/sensor/src/sensor.h"
-#include "../lib/config/src/config.h"
-#include <Scheduler.h>
+#include <connection.h>
+#include <sensor.h>
+#include <config.h>
 #include <Arduino.h>
+#include <Scheduler.h>
 
-Connection conn;
-Sensor sensor;
-
-/**
- * Setup.
- */
 void setup()
 {
-  conn.setup();
-  sensor.setup();
-  //Scheduler.start(&conn);
-  //Scheduler.start(&sensor);
-  //Scheduler.begin(); // Begin scheduler functions
+  Scheduler.start(&conn);
+  Scheduler.start(&sensor);
+  Scheduler.begin(); // Begin scheduler functions
 }
 
 void loop()
 {
-  /* never call this main loop */
+  // ! never call this main loop      ! //
+  // ! It is handled by the scheduler ! //
   // Serial.println("Warning: mainloop called.");
-  conn.loop();
-  sensor.loop();
 }

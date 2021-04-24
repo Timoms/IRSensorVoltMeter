@@ -24,6 +24,7 @@ public:
   static const char *deviceNameChr;
   static const String motd;
   static const bool resetWifi;
+  static const bool csvOutput;
 };
 
 #endif

@@ -12,5 +12,6 @@ const char *Config::wifiPasswordChr = "";         // Password of Wifi to connect
 const string Config::wifiPassword = "";           // Password of Wifi to connect
 const string Config::deviceName = "BB-DP-EM01";   // Device identifier
 const char *Config::deviceNameChr = "BB-DP-EM01"; // Device identifier
-const String Config::motd = "Welcome $ ";         // Message when connecting to Telnet
+const String Config::motd = "Initializing...";    // Message when connecting to Telnet
 const bool Config::resetWifi = false;             //reset Wifi Config
+const bool Config::csvOutput = true;              // Show output as CSV for fine tuning
